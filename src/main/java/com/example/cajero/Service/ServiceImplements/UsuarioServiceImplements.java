@@ -97,7 +97,7 @@ public class UsuarioServiceImplements implements IUsuarioService {
             float resta = Float.parseFloat(usuario.getMonto()) - cantidad;
             float cantidadCopy = cantidad;
 
-            if (cantidad <= 0.0 || cantidad < 0 || resta <= 0) {
+            if (cantidad <= -0.0 || cantidad < 0 || resta <= -0) {
                 respuesta = "No se puede retirar la cantidad solicitada";
                 throw new Exception("Imposible realizar este proceso");
             }
